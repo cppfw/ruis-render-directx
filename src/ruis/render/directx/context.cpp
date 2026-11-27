@@ -444,16 +444,17 @@ void context::bind_render_target()
 {
 	const auto rtv = this->get_color_rtv();
 
+	D3D12_CPU_DESCRIPTOR_HANDLE dsv_handle = {};
 	D3D12_CPU_DESCRIPTOR_HANDLE* dsv = nullptr;
 	if (this->depth_enabled) {
 		if (this->current_fb != nullptr && this->current_fb->depth != nullptr) {
 			// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 			const auto& depth = static_cast<const texture_depth&>(*this->current_fb->depth);
-			auto dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
+			dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
 			dsv = &dsv_handle;
 		} else if (this->current_fb == nullptr && this->screen_dsv_heap != nullptr) {
-			auto dsv_handle2 = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
-			dsv = &dsv_handle2;
+			dsv_handle = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
+			dsv = &dsv_handle;
 		}
 		// if there is no depth texture available (e.g. a frame buffer without depth),
 		// no depth is bound
