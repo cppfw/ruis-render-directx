@@ -25,6 +25,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <r4/vector.hpp>
 #include <ruis/render/vertex_array.hpp>
 
+#include "../directx.hpp"
 #include "../sdk_prelude.hpp"
 
 namespace ruis::render::directx {
