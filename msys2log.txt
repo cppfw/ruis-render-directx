@@ -1,0 +1,899 @@
+msys2 | mingw64	UNKNOWN STEP	﻿2026-11-27T19:54:56.2313995Z Current runner version: '2.338.2'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2333314Z ##[group]Runner Image Provisioner
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2334212Z Hosted Compute Agent
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2334867Z Version: 20261111.635
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2335524Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2336373Z Build Date: 2026-11-11T01:49:01Z
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2337133Z Worker ID: {350c4948-abe5-4c3e-b641-839f5bb61056}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2337927Z Region: centralus
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2338639Z Cloud: Azure
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2339212Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2340448Z ##[group]Operating System
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2341240Z Microsoft Windows Server 2025
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2341917Z 10.0.26100
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2342524Z Datacenter
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2343121Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2343708Z ##[group]Runner Image
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2344658Z Image: windows-2025-vs2026
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2345356Z Version: 20261123.321.1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2346829Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261123.321/images/windows/Windows2025-VS2026-Readme.md
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2348599Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261123.321
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2349983Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2353184Z ##[group]GITHUB_TOKEN Permissions
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2355399Z Actions: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2356115Z ArtifactMetadata: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2356754Z Attestations: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2357375Z Checks: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2357954Z CodeQuality: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2358575Z Contents: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2359197Z CopilotRequests: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2359890Z Deployments: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2360538Z Discussions: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2361143Z Drives: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2361740Z Issues: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2362376Z Metadata: read
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2363010Z Models: read
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2363619Z Packages: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2364260Z Pages: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2364863Z PullRequests: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2365503Z RepositoryProjects: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2366169Z SecurityEvents: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2366783Z Statuses: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2367379Z VulnerabilityAlerts: read
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2368054Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2370371Z Secret source: Actions
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2371413Z Cache mode: write
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2372336Z Prepare workflow directory
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2739968Z Prepare all required actions
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.2772403Z Getting action download info
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.5415921Z Download action repository 'msys2/setup-msys2@v2' (SHA:3c51bf698df1e37b2261f53cb67797b97761185c)
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:56.8296519Z Download action repository 'myci-actions/add-pacman-repo@main' (SHA:09c48efb6e4bb19f9012f6a314e6af8df4199489)
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.0033336Z Download action repository 'myci-actions/checkout@main' (SHA:8bc31e479460b4a11a32a2834387589f9529b395)
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.2469909Z Complete job name: msys2 | mingw64
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3468697Z ##[group]Run msys2/setup-msys2@v2
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3469557Z with:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3469876Z   update: true
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3470199Z   msystem: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3470585Z   install: msys2-devel mingw-w64-x86_64-toolchain
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3471124Z   path-type: minimal
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3471476Z   release: true
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3471830Z   platform-check-severity: fatal
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3472242Z   cache: true
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3472640Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3472962Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3473506Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3474112Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3474628Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3475030Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3475548Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3476002Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3477606Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3478018Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.3478394Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.4567950Z ##[group]Downloading MSYS2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.9555630Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.9557139Z ##[group]Extracting MSYS2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:57.9564185Z [command]C:\hostedtoolcache\windows\msys2-installer\0.0.20261120\x64\base.exe -y
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1790638Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1793028Z 7-Zip SFX 26.05 ZS v1.5.7 R1 (x64) : Copyright (c) 1999- Igor Pavlov, 2016- Tino Reichardt, 2022- Sergey G. Brester, 2026- fzxx : 2026-11-02
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1794132Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1795098Z Extracting archive: C:\hostedtoolcache\windows\msys2-installer\0.0.20261120\x64\base.exe
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1798097Z --
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1799425Z Path = C:\hostedtoolcache\windows\msys2-installer\0.0.20261120\x64\base.exe
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1800788Z Type = 7z
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.1801423Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.3768401Z   0%
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.3769717Z     
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.5934635Z   1% 1380 - msys64\usr\lib\terminfo\63\cons25-iso8859
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.5940037Z                                                      
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.7826584Z   1% 1576 - msys64\usr\lib\terminfo\64\d555-dg
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.9869002Z                                               
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.9869609Z   1% 2843 - msys64\usr\lib\terminfo\73\sun-e
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:58.9869895Z                                             
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.2255849Z   2% 4202 - msys64\usr\share\bash-completion\completions-core\links2.bash
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.2256517Z                                                                          
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.5255108Z   8% 5385 - msys64\usr\share\info\tar.info.gz
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.5255522Z                                              
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.7196064Z  18% 5793 - msys64\usr\share\locale\hu\LC_MESSAGES\libalpm.mo
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.7196542Z                                                              
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.9225671Z  36% 6657 - msys64\usr\share\man\man1\gettextize.1.gz
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:54:59.9226118Z                                                      
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:00.1262205Z  38% 8036 - msys64\usr\share\man\man3\libssh2_agent_get_identity_path.3.gz
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:00.1262758Z                                                                           
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:00.3292377Z  44% 9278 - msys64\usr\share\terminfo\61\ansi+cup
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:00.3292735Z                                                  
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:00.5318829Z  45% 10719 - msys64\usr\share\terminfo\6f\osborne1-w
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:00.5319371Z                                                     
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.1243044Z  46% 12068 - msys64\usr\share\zoneinfo\America\Catamarca
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.1243507Z                                                         
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.3147031Z  46% 13212 - msys64\usr\share\zoneinfo\right\America\Anguilla
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.3149371Z                                                              
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5167709Z  49% 14181 - msys64\usr\bin\findfs.exe
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5168152Z                                       
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5468952Z  91% 14480 - msys64\usr\bin\whoami.exe
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5469480Z                                       
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5469743Z Everything is Ok
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5488407Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5489150Z ##[group]Disable Key Refresh...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5502392Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.5514102Z ##[group]Restoring package cache...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:01.7513785Z Cache hit for restore-key: msys2-pkgs-upd:true-conf:28b5cd98-files:f55b068a6a53e163055d5f7ba9e229493fb1bcb5ae5f99893ac9973954016ab8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:02.8866696Z Received 125829120 of 205672170 (61.2%), 119.8 MBs/sec
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:03.8976760Z Received 205672170 of 205672170 (100.0%), 97.2 MBs/sec
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:03.8980522Z Cache Size: ~196 MB (205672170 B)
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:03.9220938Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/efb2e1f7-37e6-4619-99be-558c69cd6894/cache.tzst -P -C D:/a/ruis-render-directx/ruis-render-directx --force-local --use-compress-program "zstd -d"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.6116001Z Cache restored successfully
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.6251033Z Cache restore for msys2-pkgs-upd:true-conf:28b5cd98, got msys2-pkgs-upd:true-conf:28b5cd98-files:f55b068a6a53e163055d5f7ba9e229493fb1bcb5ae5f99893ac9973954016ab8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.6253024Z Cache restore for msys2-pkgs-upd:true-conf:28b5cd98, got msys2-pkgs-upd:true-conf:28b5cd98-files:f55b068a6a53e163055d5f7ba9e229493fb1bcb5ae5f99893ac9973954016ab8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.6254030Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.6254469Z ##[group]Starting MSYS2 for the first time...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.7193367Z [command]C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'uname' '-a'"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.7777899Z ^[[1;32mMSYS2 is starting for the first time. Executing the initial setup.^[[1;0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8175515Z Copying skeleton files.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8177501Z These files are for the users to personalise their msys2 experience.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8177797Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8177956Z They will never be overwritten nor automatically updated.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8178204Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8533594Z './.bashrc' -> '/home/runneradmin/.bashrc'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8631380Z './.bash_profile' -> '/home/runneradmin/.bash_profile'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.8726148Z './.profile' -> '/home/runneradmin/.profile'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.9101953Z 'C:\Windows\system32\drivers\etc\hosts' -> '/etc/hosts'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.9428496Z 'C:\Windows\system32\drivers\etc\protocol' -> '/etc/protocols'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:05.9744341Z 'C:\Windows\system32\drivers\etc\services' -> '/etc/services'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.0078487Z 'C:\Windows\system32\drivers\etc\networks' -> '/etc/networks'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.1181191Z gpg: /etc/pacman.d/gnupg/trustdb.gpg: trustdb created
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.1235065Z gpg: no ultimately trusted keys found
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.2910219Z gpg: starting migration from earlier GnuPG versions
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.3311531Z gpg: porting secret keys from '/etc/pacman.d/gnupg/secring.gpg' to gpg-agent
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.3313049Z gpg: migration succeeded
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.3459401Z ==> Generating pacman master key. This may take some time.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.3559902Z gpg: Generating pacman keyring master key...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.8677736Z gpg: directory '/etc/pacman.d/gnupg/openpgp-revocs.d' created
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.8879472Z gpg: revocation certificate stored as '/etc/pacman.d/gnupg/openpgp-revocs.d/7DE0FDA7E3442559E4B60F982841535FCD53C289.rev'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.8880051Z gpg: Done
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.8995995Z ==> Updating trust database...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.9243443Z gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:06.9243944Z gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.0007922Z ==> Appending keys from msys2.gpg...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.3215121Z ==> Locally signing trusted keys in keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7335716Z   -> Locally signed 5 keys.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7422778Z ==> Importing owner trust values...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7525748Z gpg: setting ownertrust to 4
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7526130Z gpg: setting ownertrust to 4
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7526396Z gpg: setting ownertrust to 4
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7526644Z gpg: setting ownertrust to 4
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7526898Z gpg: setting ownertrust to 4
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.7698598Z ==> Disabling revoked keys in keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.9422569Z   -> Disabled 4 keys.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.9511504Z ==> Updating trust database...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.9754747Z gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.9769775Z gpg: depth: 0  valid:   1  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 1u
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.9791383Z gpg: depth: 1  valid:   5  signed:   7  trust: 0-, 0q, 0n, 5m, 0f, 0u
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.9799234Z gpg: depth: 2  valid:   4  signed:   2  trust: 4-, 0q, 0n, 0m, 0f, 0u
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:07.9801080Z gpg: next trustdb check due at 2027-02-10
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.0025930Z pacman-key (pacman) 6.1.0
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.0026274Z Copyright (c) 2010-2024 Pacman Development Team <pacman-dev@lists.archlinux.org>.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.0026483Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.0116779Z This is free software; see the source for copying conditions.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.0117456Z There is NO WARRANTY, to the extent permitted by law.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.1133836Z ^[[1;32mInitial setup complete. MSYS2 is now ready to use.^[[1;0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.1264243Z MSYS_NT-10.0-26100 runnervmop6rv 3.6.12-50c44b7c.x86_64 2026-10-30 16:46 UTC x86_64 Msys
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.1310259Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.1310640Z ##[group]Configuring pacman...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.1326613Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.1327112Z ##[group]Updating packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.1689257Z [command]C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'pacman' '--noconfirm' '-Syuu' '--overwrite' '*'"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:08.6256717Z :: Synchronizing package databases...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.0294153Z  clangarm64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.0294498Z  mingw32 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.0294663Z  mingw64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.0294827Z  ucrt64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.0294981Z  clang64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.0295137Z  msys downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.3442572Z :: Starting core system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4540789Z warning: terminate other MSYS2 programs before proceeding
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4541183Z resolving dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4607506Z looking for conflicting packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4612320Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4612557Z Packages (1) pacman-6.1.0-31
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4612740Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4612858Z Total Installed Size:  35.92 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4613143Z Net Upgrade Size:       0.04 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4613317Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4614772Z :: Proceed with installation? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4615083Z checking keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.4988142Z checking package integrity...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.6345352Z loading package files...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.6368490Z checking for file conflicts...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.6368843Z :: Processing package changes...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.6369022Z upgrading pacman...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.8273059Z :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.8320267Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.8320728Z ##[group]Killing remaining tasks...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:10.9642668Z [command]C:\Windows\system32\taskkill.exe /F /FI "MODULES eq msys-2.0.dll"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:11.0571102Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:11.0571538Z INFO: No tasks running with the specified criteria.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:11.0600353Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:11.0600768Z ##[group]Final system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:11.0919215Z [command]C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'pacman' '--noconfirm' '-Syuu' '--overwrite' '*'"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:11.5754664Z :: Synchronizing package databases...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.3673332Z  clangarm64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.3673888Z  mingw32 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.3674280Z  mingw64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.3677737Z  ucrt64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.3679217Z  clang64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.3679573Z  msys downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.7652394Z :: Starting core system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.8977798Z  there is nothing to do
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.8978118Z :: Starting full system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9155124Z resolving dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9192307Z looking for conflicting packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9228343Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9228696Z Packages (2) grep-1~3.12-1  libksba-1.9.1-1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9228946Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9229064Z Total Installed Size:  1.32 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9229339Z Net Upgrade Size:      0.20 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9229773Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9231522Z :: Proceed with installation? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9231814Z checking keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:12.9695882Z checking package integrity...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.1512982Z loading package files...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.1541991Z checking for file conflicts...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.1550058Z :: Processing package changes...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.1550539Z upgrading grep...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.2156264Z upgrading libksba...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.2364509Z :: Running post-transaction hooks...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.2366393Z (1/1) Updating the info directory file...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.3980948Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.3981323Z ##[group]Installing additional packages through pacman...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.4323297Z [command]C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'pacman' '--noconfirm' '-S' '--needed' '--overwrite' '*' 'msys2-devel' 'mingw-w64-x86_64-toolchain'"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9687839Z :: There are 9 members in group mingw-w64-x86_64-toolchain:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9688142Z :: Repository mingw64
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9688689Z    1) mingw-w64-x86_64-binutils  2) mingw-w64-x86_64-crt  3) mingw-w64-x86_64-gcc  4) mingw-w64-x86_64-gdb  5) mingw-w64-x86_64-headers  6) mingw-w64-x86_64-libgomp  7) mingw-w64-x86_64-libstdc++  8) mingw-w64-x86_64-libwinpthread  9) mingw-w64-x86_64-winpthreads
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9689191Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9689263Z Enter a selection (default=all): 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9689457Z resolving dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9749428Z looking for conflicting packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9778834Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9781960Z Packages (47) binutils-2.47-1  isl-0.28-1  mingw-w64-x86_64-bzip2-1.0.8-4  mingw-w64-x86_64-cc-libs-16.2.0-7  mingw-w64-x86_64-expat-2.10.0-1  mingw-w64-x86_64-gettext-runtime-1.0-1  mingw-w64-x86_64-gmp-6.3.0-2  mingw-w64-x86_64-isl-0.28-1  mingw-w64-x86_64-libffi-3.8.1-1  mingw-w64-x86_64-libgcc-16.2.0-7  mingw-w64-x86_64-libiconv-1.19.1-1  mingw-w64-x86_64-libsystre-1.0.2-3  mingw-w64-x86_64-libtre-0.9.0-2  mingw-w64-x86_64-mpc-1.4.1-1  mingw-w64-x86_64-mpdecimal-4.0.1-3  mingw-w64-x86_64-mpfr-4.2.2-3  mingw-w64-x86_64-ncurses-6.6-5  mingw-w64-x86_64-openssl-4.1.0-1  mingw-w64-x86_64-pcre2-10.49-2  mingw-w64-x86_64-python-3.14.10-4  mingw-w64-x86_64-readline-8.3.003-1  mingw-w64-x86_64-sqlite-3.54.1-2  mingw-w64-x86_64-tcl-8.6.18-1  mingw-w64-x86_64-termcap-1.3.1-8  mingw-w64-x86_64-tk-8.6.18-1  mingw-w64-x86_64-tzdata-2026f-1  mingw-w64-x86_64-windows-default-manifest-20260815-1  mingw-w64-x86_64-wineditline-2.208-1  mingw-w64-x86_64-xxhash-0.8.4-1  mingw-w64-x86_64-xz-5.8.4-1  mingw-w64-x86_64-zlib-1.4-2  mingw-w64-x86_64-zstd-1.5.7-2  mpc-1.4.1-1  msys2-runtime-devel-3.6.12-1  msys2-w32api-headers-14.0.0.r0.g9b3dd0125-1  msys2-w32api-runtime-14.0.0.r0.g9b3dd0125-1  windows-default-manifest-20260815-2  gcc-16.2.0-1  mingw-w64-x86_64-binutils-2.47-5  mingw-w64-x86_64-crt-14.0.0.r598.ge3d18511f-1  mingw-w64-x86_64-gcc-16.2.0-7  mingw-w64-x86_64-gdb-18.1-4  mingw-w64-x86_64-headers-14.0.0.r598.ge3d18511f-1  mingw-w64-x86_64-libgomp-16.2.0-7  mingw-w64-x86_64-libstdc++-16.2.0-7  mingw-w64-x86_64-libwinpthread-14.0.0.r598.ge3d18511f-1  mingw-w64-x86_64-winpthreads-14.0.0.r598.ge3d18511f-1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9784844Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9784917Z Total Installed Size:  1261.56 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9785032Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9819179Z :: Proceed with installation? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:13.9819414Z checking keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:14.0193681Z checking package integrity...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:20.1808515Z loading package files...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:20.3599208Z checking for file conflicts...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:21.2494169Z :: Processing package changes...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:21.2494545Z installing binutils...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:21.4822155Z installing isl...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:21.4883131Z installing mpc...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:21.4905767Z installing msys2-runtime-devel...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:21.5796605Z installing msys2-w32api-headers...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:22.1598617Z installing msys2-w32api-runtime...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:22.5096133Z installing windows-default-manifest...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:22.5112447Z installing gcc...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:23.5136668Z installing mingw-w64-x86_64-libwinpthread...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:23.5163035Z installing mingw-w64-x86_64-libgcc...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:23.5193589Z installing mingw-w64-x86_64-tzdata...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.4378959Z installing mingw-w64-x86_64-libstdc++...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.4446920Z installing mingw-w64-x86_64-cc-libs...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.4459897Z installing mingw-w64-x86_64-libiconv...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.4596513Z installing mingw-w64-x86_64-gettext-runtime...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.5270254Z installing mingw-w64-x86_64-zlib...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.5421111Z installing mingw-w64-x86_64-zstd...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.5530519Z installing mingw-w64-x86_64-binutils...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:24.7187502Z installing mingw-w64-x86_64-headers...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.4114548Z installing mingw-w64-x86_64-crt...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.8762695Z installing mingw-w64-x86_64-gmp...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.8849552Z installing mingw-w64-x86_64-isl...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.9226995Z installing mingw-w64-x86_64-mpfr...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.9348319Z installing mingw-w64-x86_64-mpc...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.9387381Z installing mingw-w64-x86_64-windows-default-manifest...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.9406138Z installing mingw-w64-x86_64-winpthreads...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:25.9465971Z installing mingw-w64-x86_64-gcc...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6560236Z Optional dependencies for mingw-w64-x86_64-gcc
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6560640Z     mingw-w64-x86_64-libatomic
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6560926Z     mingw-w64-x86_64-libgomp: OpenMP [pending]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6561253Z     mingw-w64-x86_64-libquadmath: Quad Math
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6561561Z installing mingw-w64-x86_64-expat...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6645923Z installing mingw-w64-x86_64-bzip2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6742719Z installing mingw-w64-x86_64-wineditline...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.6790705Z installing mingw-w64-x86_64-pcre2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.7748124Z installing mingw-w64-x86_64-libtre...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.7813468Z installing mingw-w64-x86_64-libsystre...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:26.7860033Z installing mingw-w64-x86_64-ncurses...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:29.4795367Z installing mingw-w64-x86_64-libffi...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:29.4852713Z installing mingw-w64-x86_64-mpdecimal...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:29.4932295Z installing mingw-w64-x86_64-openssl...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:33.0865561Z Optional dependencies for mingw-w64-x86_64-openssl
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:33.0866008Z     mingw-w64-x86_64-ca-certificates
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:33.0866299Z installing mingw-w64-x86_64-tcl...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:33.8598476Z installing mingw-w64-x86_64-sqlite...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:33.9284494Z installing mingw-w64-x86_64-tk...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:34.3265305Z installing mingw-w64-x86_64-xz...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:34.3859509Z installing mingw-w64-x86_64-python...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.7615799Z installing mingw-w64-x86_64-termcap...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.7650959Z installing mingw-w64-x86_64-readline...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.7852700Z installing mingw-w64-x86_64-xxhash...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.7927031Z installing mingw-w64-x86_64-gdb...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.8727369Z Optional dependencies for mingw-w64-x86_64-gdb
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.8727835Z     mingw-w64-x86_64-python-pygments: for syntax highlighting
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.8728218Z installing mingw-w64-x86_64-libgomp...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.8908760Z :: Running post-transaction hooks...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:38.8909100Z (1/1) Updating the info directory file...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:39.4656707Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:39.4657180Z ##[group]Saving package cache...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:39.4977472Z [command]C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'paccache' '-r' '-f' '-u' '-k0'"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:39.9792850Z ==> no candidate packages found for pruning
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.0127211Z [command]C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'paccache' '-r' '-f' '-k1'"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.1612646Z ==> no candidate packages found for pruning
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.4844150Z Cache unchanged, skipping save for msys2-pkgs-upd:true-conf:28b5cd98-files:f55b068a6a53e163055d5f7ba9e229493fb1bcb5ae5f99893ac9973954016ab8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.5165143Z [command]C:\Windows\system32\cmd.exe /D /S /C D:\a\_temp\setup-msys2\msys2.cmd -c "'pacman' '--noconfirm' '-Scc'"
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9173644Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9174214Z Cache directory: /var/cache/pacman/pkg/
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9405448Z :: Do you want to remove ALL files from cache? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9405830Z removing all files from cache...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9406010Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9406133Z Database directory: /var/lib/pacman/
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9413820Z :: Do you want to remove unused repositories? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9414142Z removing unused sync repositories...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9453735Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9734217Z ##[group]Run myci-actions/add-pacman-repo@main
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9734476Z with:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9734804Z   name: cppfw_msys
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9735086Z   url: https://gagis.hopto.org/repo/cppfw/msys2/msys
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9735332Z   shell: msys2 {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9735535Z   key-server: https://gagis.hopto.org/repo/cppfw/pubkey.gpg
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9735772Z   install: myci
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9735920Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9736087Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9736313Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9736545Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9736905Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9737081Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9737300Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9737493Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9737709Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9737934Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9738096Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9738248Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9776922Z ##[start-action display=import key;id=__myci-actions_add-pacman-repo.__run]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9873357Z ##[group]Run if [ ! -z "https://gagis.hopto.org/repo/cppfw/pubkey.gpg" ]; then
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9876456Z ^[[36;1mif [ ! -z "https://gagis.hopto.org/repo/cppfw/pubkey.gpg" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9878194Z ^[[36;1m  if [ ! -z "" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9878462Z ^[[36;1m    echo "receiving keys from key server"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9878803Z ^[[36;1m    pacman-key --keyserver https://gagis.hopto.org/repo/cppfw/pubkey.gpg --recv-keys ^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9879093Z ^[[36;1m  else^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9879291Z ^[[36;1m    echo "downloading key from direct URL"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9879642Z ^[[36;1m    curl --location --silent --show-error https://gagis.hopto.org/repo/cppfw/pubkey.gpg | pacman-key --add -^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9879981Z ^[[36;1m  fi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9880130Z ^[[36;1melse^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9880330Z ^[[36;1m  echo "no key-server specified, skip importing keys"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9880559Z ^[[36;1mfi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9888856Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9889068Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9889237Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9889469Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9889703Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9889972Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9890145Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9890382Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9890790Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9891038Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9891223Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9891396Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:40.9891567Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.0887329Z downloading key from direct URL
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.5698064Z ==> Updating trust database...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.5815574Z gpg: next trustdb check due at 2027-02-10
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.5969193Z ##[end-action id=__myci-actions_add-pacman-repo.__run;outcome=success;conclusion=success;duration_ms=619]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.5971543Z ##[start-action display=add pacman repo;id=__myci-actions_add-pacman-repo.__run_2]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6052798Z ##[group]Run echo -e "[cppfw_msys]" >> /etc/pacman.conf
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6053078Z ^[[36;1mecho -e "[cppfw_msys]" >> /etc/pacman.conf^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6053346Z ^[[36;1mecho "SigLevel = Optional TrustAll" >> /etc/pacman.conf^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6053699Z ^[[36;1mecho "Server = https://gagis.hopto.org/repo/cppfw/msys2/msys" >> /etc/pacman.conf^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6054064Z ^[[36;1mpacman --sync --refresh --sysupgrade --noconfirm --noprogressbar^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6055906Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6056114Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6057477Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6057733Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6057975Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6058289Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6058464Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6058691Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6058894Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6059124Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6059312Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6059469Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:41.6059620Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:42.0130344Z :: Synchronizing package databases...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.0499283Z  clangarm64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.0499555Z  mingw32 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.0499744Z  mingw64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.0499911Z  ucrt64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.0500081Z  clang64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.0500270Z  msys downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.0500440Z  cppfw_msys downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.3701957Z :: Starting core system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.4784939Z  there is nothing to do
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.4785298Z :: Starting full system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5321994Z  there is nothing to do
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5411312Z ##[end-action id=__myci-actions_add-pacman-repo.__run_2;outcome=success;conclusion=success;duration_ms=1943]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5413442Z ##[start-action display=install packages;id=__myci-actions_add-pacman-repo.__run_3]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5499002Z ##[group]Run if [ ! -z "myci" ] ; then
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5499219Z ^[[36;1mif [ ! -z "myci" ] ; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5499436Z ^[[36;1m  pacman --noconfirm --sync --noprogressbar myci^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5499766Z ^[[36;1melse^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5499986Z ^[[36;1m  echo "installing packages is not requested"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5500191Z ^[[36;1mfi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5501784Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5501977Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5502130Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5502358Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5502581Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5502929Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5503091Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5503307Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5503500Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5503713Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5503889Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5504046Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:43.5504197Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.0954379Z resolving dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1037721Z looking for conflicting packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1048067Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1048717Z Packages (8) heimdal-7.8.0-9  heimdal-libs-7.8.0-9  libcbor-0.14.0-2  libdb-6.2.32-6  libedit-20240808_3.1-1  libfido2-1.17.0-2  openssh-10.6p2-2  myci-0.1.232-1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1049218Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1049331Z Total Download Size:    3.53 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1049899Z Total Installed Size:  17.36 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1050070Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1050231Z :: Proceed with installation? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:44.1050514Z :: Retrieving packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2082936Z  openssh-10.6p2-2-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2083232Z  heimdal-libs-7.8.0-9-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2083452Z  libdb-6.2.32-6-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2083644Z  heimdal-7.8.0-9-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2083914Z  libedit-20240808_3.1-1-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2084156Z  libfido2-1.17.0-2-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2084352Z  myci-0.1.232-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2084532Z  libcbor-0.14.0-2-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2084723Z checking keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.2431520Z checking package integrity...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.7369522Z loading package files...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.7461108Z checking for file conflicts...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.7703480Z :: Processing package changes...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.7703695Z installing libdb...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.7770366Z installing libedit...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.7948960Z installing heimdal-libs...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:45.8059121Z installing heimdal...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.1434734Z installing libcbor...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.1453535Z installing libfido2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.1478353Z installing openssh...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.1718478Z installing myci...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2214300Z ##[end-action id=__myci-actions_add-pacman-repo.__run_3;outcome=success;conclusion=success;duration_ms=2680]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2346992Z ##[group]Run myci-actions/add-pacman-repo@main
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2347237Z with:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2347386Z   name: cppfw_mingw64
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2347582Z   url: https://gagis.hopto.org/repo/cppfw/msys2/mingw64
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2347797Z   shell: msys2 {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2347985Z   key-server: https://gagis.hopto.org/repo/cppfw/pubkey.gpg
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2348213Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2348376Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2348607Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2348826Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2349103Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2349271Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2349480Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2349667Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2349870Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2350035Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2350226Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2350375Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2353751Z ##[start-action display=import key;id=__myci-actions_add-pacman-repo_2.__run]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2441127Z ##[group]Run if [ ! -z "https://gagis.hopto.org/repo/cppfw/pubkey.gpg" ]; then
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2441488Z ^[[36;1mif [ ! -z "https://gagis.hopto.org/repo/cppfw/pubkey.gpg" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2441737Z ^[[36;1m  if [ ! -z "" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2441941Z ^[[36;1m    echo "receiving keys from key server"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2442241Z ^[[36;1m    pacman-key --keyserver https://gagis.hopto.org/repo/cppfw/pubkey.gpg --recv-keys ^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2442505Z ^[[36;1m  else^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2442672Z ^[[36;1m    echo "downloading key from direct URL"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2443001Z ^[[36;1m    curl --location --silent --show-error https://gagis.hopto.org/repo/cppfw/pubkey.gpg | pacman-key --add -^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2443304Z ^[[36;1m  fi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2443454Z ^[[36;1melse^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2443636Z ^[[36;1m  echo "no key-server specified, skip importing keys"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2443843Z ^[[36;1mfi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2445287Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2445475Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2445631Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2445857Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2446683Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2446949Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2447112Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2447351Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2447537Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2447753Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2447922Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2448073Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.2448221Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.3358939Z downloading key from direct URL
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.7831388Z ==> Updating trust database...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.7935244Z gpg: next trustdb check due at 2027-02-10
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8070567Z ##[end-action id=__myci-actions_add-pacman-repo_2.__run;outcome=success;conclusion=success;duration_ms=571]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8073104Z ##[start-action display=add pacman repo;id=__myci-actions_add-pacman-repo_2.__run_2]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8165635Z ##[group]Run echo -e "[cppfw_mingw64]" >> /etc/pacman.conf
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8165915Z ^[[36;1mecho -e "[cppfw_mingw64]" >> /etc/pacman.conf^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8166173Z ^[[36;1mecho "SigLevel = Optional TrustAll" >> /etc/pacman.conf^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8166506Z ^[[36;1mecho "Server = https://gagis.hopto.org/repo/cppfw/msys2/mingw64" >> /etc/pacman.conf^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8166856Z ^[[36;1mpacman --sync --refresh --sysupgrade --noconfirm --noprogressbar^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8168343Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8168538Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8170038Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8170288Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8170516Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8170788Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8170954Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8171166Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8171363Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8171577Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8171742Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8171902Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:46.8172049Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:47.2656399Z :: Synchronizing package databases...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4035600Z  clangarm64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4035972Z  mingw32 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4036223Z  mingw64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4036474Z  ucrt64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4036716Z  clang64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4036973Z  msys downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4037260Z  cppfw_msys downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.4037520Z  cppfw_mingw64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.7725701Z :: Starting core system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.8787915Z  there is nothing to do
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.8788204Z :: Starting full system upgrade...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9323128Z  there is nothing to do
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9369989Z ##[end-action id=__myci-actions_add-pacman-repo_2.__run_2;outcome=success;conclusion=success;duration_ms=2129]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9372222Z ##[start-action display=install packages;id=__myci-actions_add-pacman-repo_2.__run_3]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9473559Z ##[group]Run if [ ! -z "" ] ; then
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9473777Z ^[[36;1mif [ ! -z "" ] ; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9473979Z ^[[36;1m  pacman --noconfirm --sync --noprogressbar ^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9474185Z ^[[36;1melse^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9474366Z ^[[36;1m  echo "installing packages is not requested"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9474561Z ^[[36;1mfi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9476515Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9476715Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9476868Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9477142Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9477415Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9477776Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9477999Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9478414Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9478610Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9478815Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9479034Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9479190Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:48.9479394Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0377369Z installing packages is not requested
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0411391Z ##[end-action id=__myci-actions_add-pacman-repo_2.__run_3;outcome=success;conclusion=success;duration_ms=103]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0533641Z ##[group]Run myci-actions/checkout@main
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0533884Z with:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0534039Z   submodules: remote_recursive
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0534205Z   path: .
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0534341Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0534483Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0534703Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0534926Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0535152Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0535333Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0535539Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0535734Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0535953Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0536148Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0536306Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0536454Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0538802Z ##[start-action display=clone repo;id=__myci-actions_checkout.__run]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0616030Z ##[group]Run # On github public runners the current directory is owned by some other user.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0616438Z ^[[36;1m# On github public runners the current directory is owned by some other user.^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0616791Z ^[[36;1m# To avoid git unsafe repository error, add current directory as a safe one to git config.^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0617105Z ^[[36;1mgit config --global --add safe.directory $(pwd)^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0617309Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0617573Z ^[[36;1m# set credentials using "GIT_ASKPASS" to avoid the token to present in output of "git remote -v"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0619093Z ^[[36;1mecho "#!/bin/bash\necho ***" > ~/git_askpass.sh^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0619303Z ^[[36;1mchmod +x ~/git_askpass.sh^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0619476Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0619622Z ^[[36;1m# create destination dir^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0619804Z ^[[36;1mecho "create destination dir: ."^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0620004Z ^[[36;1mmkdir -p .^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0620161Z ^[[36;1mpushd .^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0620307Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0620444Z ^[[36;1mif [ -z "" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0620646Z ^[[36;1m  # no clone URL is given, clone current repository^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0620851Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0620995Z ^[[36;1m  echo "clone"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0621144Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0621405Z ^[[36;1m  GIT_ASKPASS=~/git_askpass.sh git clone --quiet https://github.com/cppfw/ruis-render-directx .^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0621686Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0621904Z ^[[36;1m  ref_type=$(echo refs/pull/1/merge | sed -E -n -e 's/^refs\/([^/]*)\/.*$/\1/p')^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0622227Z ^[[36;1m  ref=$(echo refs/pull/1/merge | sed -E -n -e 's/^refs\/[^/]*\/(.*)$/\1/p')^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0622461Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0622603Z ^[[36;1m  echo "ref = $ref"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0622775Z ^[[36;1m  echo "ref_type = $ref_type"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0622955Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0623090Z ^[[36;1m  case $ref_type in^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0623250Z ^[[36;1m    pull)^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0623423Z ^[[36;1m      echo "ref is a pull request, fetch it"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0630773Z ^[[36;1m      git fetch origin +refs/pull/$ref:refs/remotes/origin/pull/$ref^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0631053Z ^[[36;1m      ref="origin/pull/$ref"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0631234Z ^[[36;1m      ;;^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0631383Z ^[[36;1m    *)^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0631543Z ^[[36;1m      echo "use commit sha as ref"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0631938Z ^[[36;1m      ref=7d3a915ccd302c1aa1e3e45a12a60b744a9214f8^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0632149Z ^[[36;1m      ;;^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0632296Z ^[[36;1m  esac^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0632429Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0632575Z ^[[36;1m  echo "checkout $ref"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0632749Z ^[[36;1m  git checkout $ref^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0632912Z ^[[36;1melse^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0634122Z ^[[36;1m  # clone URL is explicitly given, clone it^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0634337Z ^[[36;1m  echo "clone from "^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0634499Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0634674Z ^[[36;1m  GIT_ASKPASS=~/git_askpass.sh git clone --quiet  .^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0634942Z ^[[36;1mfi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0635100Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0635299Z ^[[36;1mif [ "remote_recursive" != "false" ] && [ -f ".gitmodules" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0635562Z ^[[36;1m  if [ "remote_recursive" == "remote" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0635761Z ^[[36;1m    remote=--remote^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0635929Z ^[[36;1m    recursive=^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0636117Z ^[[36;1m  elif [ "remote_recursive" == "recursive" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0636324Z ^[[36;1m    remote=^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0636483Z ^[[36;1m    recursive=--recursive^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0636700Z ^[[36;1m  elif [ "remote_recursive" == "remote_recursive" ]; then^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0636921Z ^[[36;1m    remote=--remote^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0637095Z ^[[36;1m    recursive=--recursive^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0637264Z ^[[36;1m  else^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0637410Z ^[[36;1m    remote=^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0637562Z ^[[36;1m    recursive=^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0637722Z ^[[36;1m  fi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0637864Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0638005Z ^[[36;1m  echo "clone submodules"^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0638201Z ^[[36;1m  # replace ssh to https in .gitmodules^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0638553Z ^[[36;1m  # NOTE: $ in front of sed's expression string is needed to make macosx treat \t as tab characters, then also \1 needs to be \\1^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0640168Z ^[[36;1m  sed -E -i -e $'s/^[ \t]*url[ \t]*=[ \t]*git@github.com:([^\/]*\/[^\/]*)[ \t]*$/\turl = https:\/\/***@github.com\/\\1/g' .gitmodules^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0640477Z ^[[36;1m  git submodule init^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0640676Z ^[[36;1m  git submodule update $remote $recursive^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0640870Z ^[[36;1mfi^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0641011Z ^[[36;1m^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0641150Z ^[[36;1mpopd^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0709759Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0710034Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0710196Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0710421Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0710651Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0710857Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0711028Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0711241Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0711439Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0711657Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0711825Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0711984Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.0712133Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.5284809Z create destination dir: .
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.5500198Z /d/a/ruis-render-directx/ruis-render-directx /d/a/ruis-render-directx/ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:49.5500816Z clone
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:50.9353839Z ref = 1/merge
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:50.9354151Z ref_type = pull
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:50.9354408Z ref is a pull request, fetch it
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.2523257Z From https://github.com/cppfw/ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.2523578Z  * [new ref]         refs/pull/1/merge -> origin/pull/1/merge
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.2919377Z checkout origin/pull/1/merge
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3339224Z Note: switching to 'origin/pull/1/merge'.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3339434Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3339796Z You are in 'detached HEAD' state. You can look around, make experimental
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3340108Z changes and commit them, and you can discard any commits you make in this
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3340411Z state without impacting any branches by switching back to a branch.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3340584Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3340913Z If you want to create a new branch to retain commits you create, you may
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3341770Z do so (now or later) by using -c with the switch command. Example:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3341938Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342025Z   git switch -c <new-branch-name>
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342207Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342314Z Or undo this operation with:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342472Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342542Z   git switch -
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342630Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342770Z Turn off this advice by setting config variable advice.detachedHead to false
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3342961Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3343187Z HEAD is now at 7d3a915 Merge 89ada04c35dcbaca39a2ebcd4ac76eff7453e059 into 4705a8ca0952af9f638b9ab608bd2e6e412e15d9
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.3427297Z clone submodules
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:51.9574648Z Submodule 'tool-configs' (https://github.com/cppfw/tool-configs) registered for path 'tool-configs'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:52.3722979Z Cloning into 'D:/a/ruis-render-directx/ruis-render-directx/tool-configs'...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0161986Z Submodule path 'tool-configs': checked out '4fc029ecdfeb7f4d6aa01ea94b92496678d715ea'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0303143Z /d/a/ruis-render-directx/ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0332169Z ##[end-action id=__myci-actions_checkout.__run;outcome=success;conclusion=success;duration_ms=3979]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0422049Z ##[group]Run myci-apply-version.sh --version $(myci-deb-version.sh) build/msys2/PKGBUILD.in
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0422498Z ^[[36;1mmyci-apply-version.sh --version $(myci-deb-version.sh) build/msys2/PKGBUILD.in^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0424747Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0424951Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0425116Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0425338Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0425564Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0425784Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0425950Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0426156Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0426350Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0426557Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0426722Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0426884Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.0427026Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.1958569Z applying version = 0.0.1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2190323Z substituting variables:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2190560Z   version = 0.0.1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2190709Z in files:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2673023Z 	build/msys2/PKGBUILD.in -> build/msys2/PKGBUILD
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2868847Z done applying version
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2989760Z ##[group]Run cd build/msys2
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2990000Z ^[[36;1mcd build/msys2^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2990251Z ^[[36;1mPKGEXT='.pkg.tar.xz' makepkg-mingw --syncdeps --noconfirm --skipinteg^[[0m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2991608Z shell: D:\a\_temp\setup-msys2\msys2.CMD {0}
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2991803Z env:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2991961Z   PACKAGE_NAME: ruis-render-directx
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2992178Z   PACKAGE_VERSION: 7d3a915ccd302c1aa1e3e45a12a60b744a9214f8
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2992403Z   MYCI_NEXUS_USERNAME: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2992618Z   MYCI_NEXUS_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2992784Z   MYCI_GIT_USERNAME: igagis
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2992988Z   MYCI_GIT_PASSWORD:  ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2993188Z   MYCI_CONAN_REMOTE: https://gagis.hopto.org/conan
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2993396Z   MYCI_CONAN_USER: cppfw
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2993568Z   MYCI_CONAN_PASSWORD: ***
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2993722Z   MSYSTEM: MSYS
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2993868Z   MINGW_INSTALLS: mingw64
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.2994061Z ##[endgroup]
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.5142887Z ^[[1m^[[33m=> WARNING:^[(B^[[m^[[1m MINGW_INSTALLS is deprecated, use MINGW_ARCH instead^[(B^[[m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.5614871Z ^[[1m^[[32m==> ^[(B^[[m^[[1m MINGW_ARCH: mingw64^[(B^[[m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.5615186Z ^[[1m^[[34m  ->^[(B^[[m^[[1m Building mingw64...^[(B^[[m
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.8696315Z ==> Making package: mingw-w64-x86_64-ruis-render-directx 0.0.1-1 (Fri, Nov 27, 2026  7:55:53 PM)
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:53.8787833Z ==> Checking runtime dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.2980925Z ==> Installing missing dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8569067Z resolving dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8672855Z looking for conflicting packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8693269Z warning: dependency cycle detected:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8693705Z warning: mingw-w64-x86_64-harfbuzz will be installed before its mingw-w64-x86_64-freetype dependency
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8694748Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8696975Z Packages (21) mingw-w64-x86_64-agg-2.8.42-1  mingw-w64-x86_64-brotli-1.2.1-1  mingw-w64-x86_64-cssom-0.2.25-1  mingw-w64-x86_64-freetype-2.15.0-1  mingw-w64-x86_64-fsif-1.0.163-1  mingw-w64-x86_64-glew-2.3.1-4  mingw-w64-x86_64-glib2-2.90.1-1  mingw-w64-x86_64-graphite2-1.3.15-1  mingw-w64-x86_64-harfbuzz-15.2.0-1  mingw-w64-x86_64-libjpeg-turbo-3.2.1-1  mingw-w64-x86_64-libpng-1.6.59-2  mingw-w64-x86_64-mikroxml-0.1.76-1  mingw-w64-x86_64-python-packaging-26.3-1  mingw-w64-x86_64-r4-1.0.113-1  mingw-w64-x86_64-rasterimage-0.1.42-1  mingw-w64-x86_64-svgdom-0.4.36-1  mingw-w64-x86_64-svgren-0.6.32-1  mingw-w64-x86_64-tml-0.4.0-1  mingw-w64-x86_64-utki-1.1.302-1  mingw-w64-x86_64-veg-0.1.14-1  mingw-w64-x86_64-ruis-0.6.31-1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8699017Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8699135Z Total Download Size:    16.16 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8699422Z Total Installed Size:  148.11 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8699591Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8699751Z :: Proceed with installation? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:54.8700038Z :: Retrieving packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3169468Z  mingw-w64-x86_64-glib2-2.90.1-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3169972Z  mingw-w64-x86_64-ruis-0.6.31-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3170203Z  mingw-w64-x86_64-harfbuzz-15.2.0-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3170452Z  mingw-w64-x86_64-libjpeg-turbo-3.2.1-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3170688Z  mingw-w64-x86_64-glew-2.3.1-4-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3170921Z  mingw-w64-x86_64-freetype-2.15.0-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3171147Z  mingw-w64-x86_64-svgdom-0.4.36-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3171372Z  mingw-w64-x86_64-brotli-1.2.1-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3171591Z  mingw-w64-x86_64-libpng-1.6.59-2-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3171809Z  mingw-w64-x86_64-utki-1.1.302-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3172051Z  mingw-w64-x86_64-python-packaging-26.3-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3172289Z  mingw-w64-x86_64-agg-2.8.42-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3182299Z  mingw-w64-x86_64-veg-0.1.14-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3182705Z  mingw-w64-x86_64-graphite2-1.3.15-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3183042Z  mingw-w64-x86_64-fsif-1.0.163-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3183358Z  mingw-w64-x86_64-tml-0.4.0-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3183679Z  mingw-w64-x86_64-r4-1.0.113-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3183995Z  mingw-w64-x86_64-svgren-0.6.32-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3184324Z  mingw-w64-x86_64-cssom-0.2.25-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3184657Z  mingw-w64-x86_64-rasterimage-0.1.42-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3185008Z  mingw-w64-x86_64-mikroxml-0.1.76-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3185311Z checking keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:57.3550217Z checking package integrity...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.1804939Z loading package files...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.2192060Z checking for file conflicts...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.3199349Z :: Processing package changes...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.3199650Z installing mingw-w64-x86_64-utki...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.4728748Z installing mingw-w64-x86_64-fsif...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.5166548Z installing mingw-w64-x86_64-r4...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.5583941Z installing mingw-w64-x86_64-mikroxml...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.5776846Z installing mingw-w64-x86_64-cssom...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.6086088Z installing mingw-w64-x86_64-svgdom...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.7845508Z installing mingw-w64-x86_64-agg...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.8328558Z installing mingw-w64-x86_64-libpng...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.8801046Z installing mingw-w64-x86_64-libjpeg-turbo...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.9233708Z installing mingw-w64-x86_64-rasterimage...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.9545396Z installing mingw-w64-x86_64-veg...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:58.9934962Z installing mingw-w64-x86_64-svgren...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.0164053Z installing mingw-w64-x86_64-tml...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.0611401Z installing mingw-w64-x86_64-brotli...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.0751803Z installing mingw-w64-x86_64-python-packaging...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.1123566Z installing mingw-w64-x86_64-glib2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.3853417Z installing mingw-w64-x86_64-graphite2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.3924819Z installing mingw-w64-x86_64-harfbuzz...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.4425382Z installing mingw-w64-x86_64-freetype...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.4704161Z installing mingw-w64-x86_64-glew...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:55:59.4924802Z installing mingw-w64-x86_64-ruis...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:00.8775778Z ==> Checking buildtime dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.2927406Z ==> Installing missing dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8068624Z resolving dependencies...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8170769Z looking for conflicting packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8183739Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8184886Z Packages (10) diffutils-3.12-1  make-4.4.1-3  mingw-w64-x86_64-clang-23.1.5-1  mingw-w64-x86_64-clang-libs-23.1.5-1  mingw-w64-x86_64-libxml2-2.15.4-3  mingw-w64-x86_64-llvm-libs-23.1.5-1  doxygen-1.18.0-2  mingw-w64-x86_64-clang-tools-extra-23.1.5-1  prorab-2.0.31-1  prorab-extra-0.2.62-1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8185825Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8185977Z Total Download Size:   105.14 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8186286Z Total Installed Size:  767.50 MiB
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8186452Z 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8186745Z :: Proceed with installation? [Y/n] 
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:01.8187029Z :: Retrieving packages...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5473180Z  mingw-w64-x86_64-llvm-libs-23.1.5-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5473498Z  mingw-w64-x86_64-clang-23.1.5-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5473744Z  mingw-w64-x86_64-clang-libs-23.1.5-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5474012Z  mingw-w64-x86_64-clang-tools-extra-23.1.5-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5474255Z  doxygen-1.18.0-2-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5474475Z  mingw-w64-x86_64-libxml2-2.15.4-3-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5474697Z  make-4.4.1-3-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5474882Z  diffutils-3.12-1-x86_64 downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5475169Z  prorab-2.0.31-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5476131Z  prorab-extra-0.2.62-1-any downloading...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5476364Z checking keyring...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:03.5840248Z checking package integrity...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.5169007Z loading package files...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.5334949Z checking for file conflicts...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.5949750Z :: Processing package changes...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.5949981Z installing make...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.6146922Z installing diffutils...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.6391903Z installing prorab...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.6407556Z installing prorab-extra...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.6444284Z installing doxygen...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.6862566Z installing mingw-w64-x86_64-libxml2...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:05.8280163Z installing mingw-w64-x86_64-llvm-libs...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:06.0190502Z installing mingw-w64-x86_64-clang-libs...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:06.1501250Z installing mingw-w64-x86_64-clang...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:07.2904581Z Optional dependencies for mingw-w64-x86_64-clang
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:07.2904856Z     mingw-w64-x86_64-llvm=23.1.5
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:07.2905090Z installing mingw-w64-x86_64-clang-tools-extra...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:07.6233098Z :: Running post-transaction hooks...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:07.6233383Z (1/1) Updating the info directory file...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:08.3692250Z ==> Retrieving sources...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:08.3876089Z ==> WARNING: Skipping all source file integrity checks.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:08.3968443Z ==> Extracting sources...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:08.4191078Z ==> Starting prepare()...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:08.4660999Z ==> Starting build()...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:09.3826894Z applying version = 0.0.1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:09.3827271Z substituting variables:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:09.3827520Z   version = 0.0.1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:09.3827747Z in files:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:09.3828329Z 	/d/a/ruis-render-directx/ruis-render-directx/doxygen/doxygen.cfg.in -> /d/a/ruis-render-directx/ruis-render-directx/doxygen/out/doxygen.cfg
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:09.3828927Z done applying version
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2618833Z make: *** Waiting for unfinished jobs....
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2619318Z compile src/ruis/render/directx/context.cpp
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2621034Z In file included from D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/shaders/shader_common.hpp:28,
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2621857Z                  from D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/context.hpp:33,
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2622564Z                  from D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/context.cpp:22:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2623613Z D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/shaders/shader_common.hpp: In function 'D3D12_PRIMITIVE_TOPOLOGY ruis::render::directx::to_topology(ruis::render::vertex_array::mode)':
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2624959Z D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/directx.hpp:164:45: error: 'D3D12_PRIMITIVE_TOPOLOGY_TRIANGLELIST' was not declared in this scope; did you mean 'D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST'?
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2625964Z   164 | #define D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST D3D12_PRIMITIVE_TOPOLOGY_TRIANGLELIST
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2626516Z       |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2627289Z D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/shaders/shader_common.hpp:74:32: note: in expansion of macro 'D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2628073Z    74 |                         return D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2628532Z       |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2628970Z compilation terminated due to -Wfatal-errors.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.2629855Z make: *** [/d/a/ruis-render-directx/ruis-render-directx/src/makefile:26: /d/a/ruis-render-directx/ruis-render-directx/src/out/rel/obj_ruis-render-directx/ruis/render/directx/context.cpp.o] Error 1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3299718Z compile src/ruis/render/directx/factory.cpp
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3301088Z In file included from D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/factory.hpp:30,
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3302503Z                  from D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/factory.cpp:22:
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3303477Z D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/shaders/shader_common.hpp: In function 'D3D12_PRIMITIVE_TOPOLOGY ruis::render::directx::to_topology(ruis::render::vertex_array::mode)':
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3304765Z D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/directx.hpp:164:45: error: 'D3D12_PRIMITIVE_TOPOLOGY_TRIANGLELIST' was not declared in this scope; did you mean 'D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST'?
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3305742Z   164 | #define D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST D3D12_PRIMITIVE_TOPOLOGY_TRIANGLELIST
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3306220Z       |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3306954Z D:/a/ruis-render-directx/ruis-render-directx/src/ruis/render/directx/shaders/shader_common.hpp:74:32: note: in expansion of macro 'D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST'
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3307842Z    74 |                         return D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3308229Z       |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3308596Z compilation terminated due to -Wfatal-errors.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.3309521Z make: *** [/d/a/ruis-render-directx/ruis-render-directx/src/makefile:26: /d/a/ruis-render-directx/ruis-render-directx/src/out/rel/obj_ruis-render-directx/ruis/render/directx/factory.cpp.o] Error 1
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.6268375Z compile src/ruis/render/directx/directx.cpp
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.7688381Z compile src/ruis/render/directx/device.cpp
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.7985234Z ==> ERROR: A failure occurred in build().
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.8122766Z     Aborting...
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.8178423Z ##[error]Process completed with exit code 4.
+msys2 | mingw64	UNKNOWN STEP	2026-11-27T19:56:11.8266109Z Cleaning up orphan processes

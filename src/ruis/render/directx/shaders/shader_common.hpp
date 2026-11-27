@@ -73,7 +73,7 @@ inline D3D12_PRIMITIVE_TOPOLOGY to_topology(ruis::render::vertex_array::mode m)
 		case ruis::render::vertex_array::mode::triangles:
 			return D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
 		case ruis::render::vertex_array::mode::triangle_fan:
-			return D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN;
+			return d3d12_topology_triangle_fan;
 		case ruis::render::vertex_array::mode::line_loop:
 			return D3D_PRIMITIVE_TOPOLOGY_LINELIST; // D3D12 has no line loop; use a line list
 		case ruis::render::vertex_array::mode::triangle_strip:

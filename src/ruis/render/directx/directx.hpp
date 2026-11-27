@@ -157,15 +157,9 @@ inline constexpr auto D3D12_RESOURCE_STATE_DEPTH_STENCIL = //
 // it is the maximum mip level (2048) that indicates "all mip levels"
 inline constexpr float D3D12_MAX_LOD = 2048.0f;
 
-// the primitive topology enum values were renamed from D3D12_PRIMITIVE_TOPOLOGY_*
-// to D3D_PRIMITIVE_TOPOLOGY_* in the new windows sdk (10.0.26100 and later);
-// the mingw-w64 headers still use the old names
-#if defined(__MINGW32__)
-#define D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST D3D12_PRIMITIVE_TOPOLOGY_TRIANGLELIST
-#define D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP D3D12_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP
-#define D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN D3D12_PRIMITIVE_TOPOLOGY_TRIANGLEFAN
-#define D3D_PRIMITIVE_TOPOLOGY_LINELIST D3D12_PRIMITIVE_TOPOLOGY_LINELIST
-#endif
+// triangle fans are not supported by the d3d12 hardware abstraction; the
+// mingw-w64 headers lack the D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN enumerator
+inline constexpr D3D12_PRIMITIVE_TOPOLOGY d3d12_topology_triangle_fan = static_cast<D3D12_PRIMITIVE_TOPOLOGY>(6);
 
 inline const D3D12_HEAP_PROPERTIES& default_heap_properties()
 {
