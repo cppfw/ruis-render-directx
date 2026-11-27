@@ -497,20 +497,17 @@ void context::clear_framebuffer_depth()
 	if (!this->depth_enabled) {
 		return;
 	}
-	D3D12_CPU_DESCRIPTOR_HANDLE* dsv = nullptr;
+	D3D12_CPU_DESCRIPTOR_HANDLE dsv_handle = {};
 	if (this->current_fb != nullptr && this->current_fb->depth != nullptr) {
 		// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 		const auto& depth = static_cast<const texture_depth&>(*this->current_fb->depth);
-		auto dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
-		dsv = &dsv_handle;
+		dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
 	} else if (this->current_fb == nullptr && this->screen_dsv_heap != nullptr) {
-		auto dsv_handle2 = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
-		dsv = &dsv_handle2;
-	}
-	if (dsv == nullptr) {
+		dsv_handle = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
+	} else {
 		return; // no depth texture to clear
 	}
-	this->command_list->ClearDepthStencilView(*dsv, D3D12_CLEAR_FLAG_DEPTH, 0.0f, 0, 0, nullptr);
+	this->command_list->ClearDepthStencilView(dsv_handle, D3D12_CLEAR_FLAG_DEPTH, 0.0f, 0, 0, nullptr);
 }
 
 void context::clear_framebuffer_stencil()
