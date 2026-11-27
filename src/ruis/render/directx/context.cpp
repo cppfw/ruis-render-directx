@@ -374,9 +374,14 @@ void context::ensure_frame_began()
 	}
 
 	// reset the command allocator and the command list (the GPU has finished with
-	// the work recorded in them)
-	check_hresult(this->command_allocator->Reset(), "command allocator Reset");
-	check_hresult(this->command_list->Reset(this->command_allocator, nullptr), "command list Reset");
+	// the work recorded in them); a freshly created pair is already in the reset
+	// state and some runtimes reject Reset() on it until the first work has
+	// completed
+	if (!this->frame_first_begin) {
+		check_hresult(this->command_allocator->Reset(), "command allocator Reset");
+		check_hresult(this->command_list->Reset(this->command_allocator, nullptr), "command list Reset");
+	}
+	this->frame_first_begin = false;
 
 	this->frame_begun = true;
 }
@@ -439,16 +444,17 @@ void context::bind_render_target()
 {
 	const auto rtv = this->get_color_rtv();
 
+	D3D12_CPU_DESCRIPTOR_HANDLE dsv_handle = {};
 	D3D12_CPU_DESCRIPTOR_HANDLE* dsv = nullptr;
 	if (this->depth_enabled) {
 		if (this->current_fb != nullptr && this->current_fb->depth != nullptr) {
 			// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 			const auto& depth = static_cast<const texture_depth&>(*this->current_fb->depth);
-			auto dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
+			dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
 			dsv = &dsv_handle;
 		} else if (this->current_fb == nullptr && this->screen_dsv_heap != nullptr) {
-			auto dsv_handle2 = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
-			dsv = &dsv_handle2;
+			dsv_handle = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
+			dsv = &dsv_handle;
 		}
 		// if there is no depth texture available (e.g. a frame buffer without depth),
 		// no depth is bound
@@ -492,20 +498,17 @@ void context::clear_framebuffer_depth()
 	if (!this->depth_enabled) {
 		return;
 	}
-	D3D12_CPU_DESCRIPTOR_HANDLE* dsv = nullptr;
+	D3D12_CPU_DESCRIPTOR_HANDLE dsv_handle = {};
 	if (this->current_fb != nullptr && this->current_fb->depth != nullptr) {
 		// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 		const auto& depth = static_cast<const texture_depth&>(*this->current_fb->depth);
-		auto dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
-		dsv = &dsv_handle;
+		dsv_handle = depth.dsv_heap->GetCPUDescriptorHandleForHeapStart();
 	} else if (this->current_fb == nullptr && this->screen_dsv_heap != nullptr) {
-		auto dsv_handle2 = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
-		dsv = &dsv_handle2;
-	}
-	if (dsv == nullptr) {
+		dsv_handle = this->screen_dsv_heap->GetCPUDescriptorHandleForHeapStart();
+	} else {
 		return; // no depth texture to clear
 	}
-	this->command_list->ClearDepthStencilView(*dsv, D3D12_CLEAR_FLAG_DEPTH, 0.0f, 0, 0, nullptr);
+	this->command_list->ClearDepthStencilView(dsv_handle, D3D12_CLEAR_FLAG_DEPTH, 0.0f, 0, 0, nullptr);
 }
 
 void context::clear_framebuffer_stencil()
@@ -790,16 +793,18 @@ void context::draw_indexed(
 		this->command_list->IASetVertexBuffers(0, 1, &vbv);
 	}
 
-	// the index buffer
+	// the index buffer (an empty index buffer has no GPU resource)
 	{
 		// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 		const auto& ib = static_cast<const index_buffer&>(va.indices.get());
-		const auto ibv = D3D12_INDEX_BUFFER_VIEW{
-			.BufferLocation = ib.gpu_va,
-			.SizeInBytes = UINT(UINT64(ib.index_count) * (ib.index_format == DXGI_FORMAT_R16_UINT ? 2 : 4)),
-			.Format = ib.index_format
-		};
-		this->command_list->IASetIndexBuffer(&ibv);
+		if (ib.index_count > 0) {
+			const auto ibv = D3D12_INDEX_BUFFER_VIEW{
+				.BufferLocation = ib.gpu_va,
+				.SizeInBytes = UINT(UINT64(ib.index_count) * (ib.index_format == DXGI_FORMAT_R16_UINT ? 2 : 4)),
+				.Format = ib.index_format
+			};
+			this->command_list->IASetIndexBuffer(&ibv);
+		}
 	}
 
 	// the per-draw uniforms (root 32-bit constants)
@@ -843,11 +848,13 @@ void context::draw_indexed(
 		this->command_list->RSSetScissorRects(1, &scissor_desc);
 	}
 
-	// the draw call
+	// the draw call (skipped for an empty index buffer)
 	{
 		// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 		const auto& ib = static_cast<const index_buffer&>(va.indices.get());
-		this->command_list->DrawIndexedInstanced(ib.index_count, 1, 0, 0, 0);
+		if (ib.index_count > 0) {
+			this->command_list->DrawIndexedInstanced(ib.index_count, 1, 0, 0, 0);
+		}
 	}
 }
 
@@ -920,7 +927,7 @@ rasterimage::image_variant context::readback_framebuffer_color(const ruis::rende
 						.Width = UINT(w),
 						.Height = UINT(h),
 						.Depth = 1,
-						.RowPitch = UINT(row_pitch)
+						.RowPitch = UINT(SIZE_T(row_pitch))
 					}
 				}
 			};
@@ -949,10 +956,10 @@ rasterimage::image_variant context::readback_framebuffer_color(const ruis::rende
 		check_hresult(cpu_readback->Map(0, &read_range, &mapped), "Map (cpu readback)");
 		auto* dst = pixels.data();
 		auto* src = static_cast<const uint8_t*>(mapped);
-		for (UINT y = 0; y < h; ++y) {
-			std::memcpy(dst, src, row_pitch);
-			dst += row_pitch;
-			src += pitch;
+		for (size_t y = 0; y < SIZE_T(h); ++y) {
+			std::memcpy(dst, src, SIZE_T(row_pitch));
+			dst += SIZE_T(row_pitch);
+			src += SIZE_T(pitch);
 		}
 		cpu_readback->Unmap(0, nullptr);
 	}

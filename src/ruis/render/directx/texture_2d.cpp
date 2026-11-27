@@ -220,7 +220,7 @@ void texture_2d::record_upload_commands(ID3D12GraphicsCommandList* cmd, ID3D12Re
 					.Width = w,
 					.Height = h,
 					.Depth = 1,
-					.RowPitch = UINT(this->staging_row_pitch())
+					.RowPitch = UINT(SIZE_T(this->staging_row_pitch()))
 				}
 			}
 		};

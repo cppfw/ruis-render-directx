@@ -1,0 +1,59 @@
+Source: libruis-render-directx
+Section: libs
+Priority: extra
+Maintainer: Ivan Gagis <igagis@gmail.com>
+Build-Depends:
+	debhelper (>= 9),
+	prorab,
+	prorab-extra,
+	clang-format,
+	clang-tidy,
+	libruis-dev (>= 0.6.27)
+Build-Depends-Indep: doxygen
+Standards-Version: 3.9.2
+
+Package: libruis-render-directx$(soname)
+Section: libs
+Architecture: any
+Depends:
+	${shlibs:Depends},
+	${misc:Depends}
+Description: DirectX 12 renderer for ruis.
+	DirectX 12 renderer for ruis GUI library.
+
+Package: libruis-render-directx-dbg$(soname)
+Section: libs
+Architecture: any
+Depends:
+	${shlibs:Depends},
+	${misc:Depends}
+Description: DirectX 12 renderer for ruis.
+	Debug version of libruis-render-directx.
+
+Package: libruis-render-directx$(soname)-dbgsrc
+Section: debug
+Architecture: all
+Depends:
+	libruis-render-directx$(soname)-dbgsym (= ${binary:Version}),
+	libruis-render-directx-dbg$(soname)-dbgsym (= ${binary:Version}),
+	${misc:Depends}
+Description: debugging sources for libruis-render-directx$(soname) package.
+
+Package: libruis-render-directx-dev
+Section: libdevel
+Architecture: any
+Depends:
+	libruis-render-directx$(soname) (= ${binary:Version}),
+	libruis-render-directx-dbg$(soname) (= ${binary:Version}),
+	libruis-dev,
+	${misc:Depends}
+Suggests: libruis-render-directx-doc
+Description: DirectX 12 renderer for ruis.
+	DirectX 12 renderer for ruis GUI library.
+
+Package: libruis-render-directx-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: documentation for libruis-render-directx library.
+	For more details see description to libruis-render-directx-dev package.
