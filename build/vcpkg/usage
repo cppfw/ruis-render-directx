@@ -1,0 +1,5 @@
+ruis-render-directx provides CMake targets:
+
+find_package(ruis-render-directx CONFIG REQUIRED)
+
+target_link_libraries(main PRIVATE ruis-render-directx::ruis-render-directx)

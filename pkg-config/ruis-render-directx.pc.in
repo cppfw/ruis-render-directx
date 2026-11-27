@@ -1,0 +1,9 @@
+Name: ruis-render-directx   # human-readable name
+Description: C++ DirectX 12 renderer for ruis GUI library
+Version: $(version)
+URL: https://github.com/cppfw/ruis-render-directx
+Requires:
+Conflicts:
+Libs: -lruis-render-directx
+Libs.private:
+Cflags:

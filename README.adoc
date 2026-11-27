@@ -1,0 +1,9 @@
+:name: ruis-render-directx
+
+= {name}
+
+|====
+| link:https://github.com/cppfw/{name}/releases[image:https://img.shields.io/github/tag/cppfw/{name}.svg[releases]] | link:https://github.com/cppfw/{name}/actions[image:https://img.shields.io/github/workflows/status/cppfw/{name}/ci.svg[ci status]] | link:https://codecov.io/gh/cppfw/{name}[image:https://codecov.io/gh/cppfw/{name}/branch/main/graph/badge.svg[codecov.io]]
+|====
+
+DirectX 12 renderer for ruis (Windows only)
