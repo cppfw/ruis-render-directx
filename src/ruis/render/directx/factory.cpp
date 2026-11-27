@@ -433,8 +433,8 @@ void factory::upload_texture(texture_2d* t) const
 		check_hresult(upload->Map(0, nullptr, &mapped), "Map (upload buffer)");
 		auto* dst = static_cast<uint8_t*>(mapped);
 		const auto* src = t->deferred_data.data();
-		for (UINT64 y = 0; y < h; ++y) {
-			std::memcpy(dst + y * pitch, src + y * row_bytes, row_bytes);
+		for (size_t y = 0; y < SIZE_T(h); ++y) {
+			std::memcpy(dst + y * SIZE_T(pitch), src + y * SIZE_T(row_bytes), SIZE_T(row_bytes));
 		}
 		upload->Unmap(0, nullptr);
 	}

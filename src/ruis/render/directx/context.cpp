@@ -927,7 +927,7 @@ rasterimage::image_variant context::readback_framebuffer_color(const ruis::rende
 						.Width = UINT(w),
 						.Height = UINT(h),
 						.Depth = 1,
-						.RowPitch = UINT(row_pitch)
+						.RowPitch = UINT(SIZE_T(row_pitch))
 					}
 				}
 			};
@@ -956,10 +956,10 @@ rasterimage::image_variant context::readback_framebuffer_color(const ruis::rende
 		check_hresult(cpu_readback->Map(0, &read_range, &mapped), "Map (cpu readback)");
 		auto* dst = pixels.data();
 		auto* src = static_cast<const uint8_t*>(mapped);
-		for (UINT y = 0; y < h; ++y) {
-			std::memcpy(dst, src, row_pitch);
-			dst += row_pitch;
-			src += pitch;
+		for (size_t y = 0; y < SIZE_T(h); ++y) {
+			std::memcpy(dst, src, SIZE_T(row_pitch));
+			dst += SIZE_T(row_pitch);
+			src += SIZE_T(pitch);
 		}
 		cpu_readback->Unmap(0, nullptr);
 	}
