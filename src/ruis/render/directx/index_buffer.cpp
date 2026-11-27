@@ -57,6 +57,14 @@ void index_buffer::upload(utki::span<const uint8_t> data, DXGI_FORMAT fmt, UINT 
 {
 	const auto byte_size = data.size();
 
+	this->index_format = fmt;
+	this->index_count = count;
+
+	// an empty index buffer does not need a GPU resource
+	if (byte_size == 0) {
+		return;
+	}
+
 	// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the factory is owned by the renderer; the base-class reference comes from the ruis API")
 	auto& dx_f = static_cast<const ruis::render::directx::factory&>(this->factory.get());
 	auto* device = dx_f.device;
@@ -77,9 +85,6 @@ void index_buffer::upload(utki::span<const uint8_t> data, DXGI_FORMAT fmt, UINT 
 		);
 		this->gpu_va = this->resource->GetGPUVirtualAddress();
 	}
-
-	this->index_format = fmt;
-	this->index_count = count;
 
 	// ---- upload the data ----
 	{

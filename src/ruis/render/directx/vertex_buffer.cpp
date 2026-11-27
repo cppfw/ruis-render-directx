@@ -21,6 +21,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 #include "vertex_buffer.hpp"
 
+#include <cstdio>
 #include <cstring>
 
 #include "factory.hpp"
@@ -37,6 +38,11 @@ vertex_buffer::vertex_buffer(
 	),
 	byte_size(padded_data.size() * sizeof(float))
 {
+	// an empty vertex buffer does not need a GPU resource
+	if (this->byte_size == 0) {
+		return;
+	}
+
 	// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the factory is owned by the renderer; the base-class reference comes from the ruis API")
 	auto& dx_f = static_cast<const ruis::render::directx::factory&>(this->factory.get());
 	auto* device = dx_f.device;
@@ -44,6 +50,13 @@ vertex_buffer::vertex_buffer(
 	// ---- the vertex buffer (default heap) ----
 	{
 		const auto desc = make_buffer_desc(UINT64(this->byte_size), D3D12_RESOURCE_FLAG_NONE);
+		char vbuf_msg[128] = {0};
+		std::snprintf(
+			vbuf_msg,
+			sizeof(vbuf_msg),
+			"CreateCommittedResource (vertex buffer, size=%u)",
+			UINT(this->byte_size)
+		);
 		check_hresult(
 			device->CreateCommittedResource(
 				&default_heap_properties(),
@@ -53,7 +66,7 @@ vertex_buffer::vertex_buffer(
 				nullptr,
 				IID_PPV_ARGS(&this->resource)
 			),
-			"CreateCommittedResource (vertex buffer)"
+			vbuf_msg
 		);
 		this->gpu_va = this->resource->GetGPUVirtualAddress();
 	}

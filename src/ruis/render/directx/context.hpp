@@ -219,6 +219,7 @@ private:
 
 	// ---- current frame state ----
 	bool frame_begun = false;
+	bool frame_first_begin = true; // a fresh command allocator rejects Reset() on some runtimes
 
 	// ---- renderer state ----
 	ruis::render::frame_buffer* current_fb = nullptr; // the current framebuffer (nullptr = screen)

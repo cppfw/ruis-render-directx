@@ -21,6 +21,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#include <cstdio>
 #include <stdexcept>
 #include <string>
 
@@ -41,10 +42,9 @@ namespace ruis::render::directx {
 inline void check_hresult(HRESULT hr, const char* what)
 {
 	if (FAILED(hr)) {
-		throw std::runtime_error(
-			std::string("DirectX 12 call failed: ") + what + " (hr = 0x" + std::to_string(static_cast<unsigned>(hr)) +
-			")"
-		);
+		char hr_buf[16] = {0};
+		std::snprintf(hr_buf, sizeof(hr_buf), "0x%08x", static_cast<unsigned int>(hr));
+		throw std::runtime_error(std::string("DirectX 12 call failed: ") + what + " (hr = " + hr_buf + ")");
 	}
 }
 
@@ -153,13 +153,17 @@ inline constexpr auto D3D12_RESOURCE_STATE_DEPTH_STENCIL = //
 	D3D12_RESOURCE_STATE_DEPTH_WRITE | //
 	D3D12_RESOURCE_STATE_DEPTH_READ;
 
+// D3D12_MAX_LOD was removed from the new SDK;
+// it is the maximum mip level (2048) that indicates "all mip levels"
+inline constexpr float D3D12_MAX_LOD = 2048.0f;
+
 inline const D3D12_HEAP_PROPERTIES& default_heap_properties()
 {
 	// a process-wide singleton (the properties are immutable)
 	static const auto props = D3D12_HEAP_PROPERTIES{
 		.Type = D3D12_HEAP_TYPE_DEFAULT,
 		.CPUPageProperty = D3D12_CPU_PAGE_PROPERTY_UNKNOWN,
-		.MemoryPoolPreference = D3D12_MEMORY_POOL_L0,
+		.MemoryPoolPreference = D3D12_MEMORY_POOL_UNKNOWN,
 		.CreationNodeMask = 0,
 		.VisibleNodeMask = 0
 	};
@@ -212,7 +216,7 @@ inline const D3D12_HEAP_PROPERTIES& upload_heap_properties()
 	static const auto props = D3D12_HEAP_PROPERTIES{
 		.Type = D3D12_HEAP_TYPE_UPLOAD,
 		.CPUPageProperty = D3D12_CPU_PAGE_PROPERTY_UNKNOWN,
-		.MemoryPoolPreference = D3D12_MEMORY_POOL_L0,
+		.MemoryPoolPreference = D3D12_MEMORY_POOL_UNKNOWN,
 		.CreationNodeMask = 0,
 		.VisibleNodeMask = 0
 	};

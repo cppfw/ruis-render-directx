@@ -169,6 +169,7 @@ private:
 	// work), but they advance this internal submission state
 	mutable uint64_t upload_fence_value = 0;
 	mutable bool upload_submitted = false;
+	mutable bool upload_first_shot = true; // a fresh command allocator rejects Reset() on some runtimes
 };
 
 } // namespace ruis::render::directx

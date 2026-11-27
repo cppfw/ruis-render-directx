@@ -85,7 +85,7 @@ factory::factory(const utki::shared_ref<const surface>& surface) : //
 			.ComparisonFunc = D3D12_COMPARISON_FUNC_NEVER,
 			.BorderColor = D3D12_STATIC_BORDER_COLOR_TRANSPARENT_BLACK,
 			.MinLOD = 0.0f,
-			.MaxLOD = 0.0f,
+			.MaxLOD = D3D12_MAX_LOD,
 			.ShaderRegister = 0,
 			.RegisterSpace = 0,
 			.ShaderVisibility = D3D12_SHADER_VISIBILITY_PIXEL
@@ -101,13 +101,17 @@ factory::factory(const utki::shared_ref<const surface>& surface) : //
 
 		ID3DBlob* blob = nullptr;
 		ID3DBlob* error_blob = nullptr;
-		check_hresult(
-			D3D12SerializeRootSignature(&desc, D3D_ROOT_SIGNATURE_VERSION_1_1, &blob, &error_blob),
-			"D3D12SerializeRootSignature"
-		);
+		const auto hr = D3D12SerializeRootSignature(&desc, D3D_ROOT_SIGNATURE_VERSION_1_0, &blob, &error_blob);
+		std::string err_text;
 		if (error_blob != nullptr) {
+			const auto ptr = reinterpret_cast<const char*>(error_blob->GetBufferPointer());
+			err_text = (ptr != nullptr) ? std::string(ptr) : std::string();
 			error_blob->Release();
 		}
+		check_hresult(
+			FAILED(hr) ? hr : S_OK,
+			FAILED(hr) && !err_text.empty() ? err_text.c_str() : "D3D12SerializeRootSignature"
+		);
 		check_hresult(
 			this->device->CreateRootSignature(
 				0,
@@ -178,8 +182,13 @@ void factory::one_shot(std::function<void(ID3D12GraphicsCommandList*)> cmd) cons
 		}
 	}
 
-	check_hresult(this->upload_allocator->Reset(), "upload allocator Reset");
-	check_hresult(this->upload_command_list->Reset(this->upload_allocator, nullptr), "upload command list Reset");
+	// a freshly created allocator and command list are already in the reset state;
+	// some runtimes reject Reset() on them until the first work has completed
+	if (!this->upload_first_shot) {
+		check_hresult(this->upload_allocator->Reset(), "upload allocator Reset");
+		check_hresult(this->upload_command_list->Reset(this->upload_allocator, nullptr), "upload command list Reset");
+	}
+	this->upload_first_shot = false;
 
 	cmd(this->upload_command_list);
 

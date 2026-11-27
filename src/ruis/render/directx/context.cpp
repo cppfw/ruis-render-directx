@@ -374,9 +374,14 @@ void context::ensure_frame_began()
 	}
 
 	// reset the command allocator and the command list (the GPU has finished with
-	// the work recorded in them)
-	check_hresult(this->command_allocator->Reset(), "command allocator Reset");
-	check_hresult(this->command_list->Reset(this->command_allocator, nullptr), "command list Reset");
+	// the work recorded in them); a freshly created pair is already in the reset
+	// state and some runtimes reject Reset() on it until the first work has
+	// completed
+	if (!this->frame_first_begin) {
+		check_hresult(this->command_allocator->Reset(), "command allocator Reset");
+		check_hresult(this->command_list->Reset(this->command_allocator, nullptr), "command list Reset");
+	}
+	this->frame_first_begin = false;
 
 	this->frame_begun = true;
 }
@@ -790,16 +795,18 @@ void context::draw_indexed(
 		this->command_list->IASetVertexBuffers(0, 1, &vbv);
 	}
 
-	// the index buffer
+	// the index buffer (an empty index buffer has no GPU resource)
 	{
 		// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 		const auto& ib = static_cast<const index_buffer&>(va.indices.get());
-		const auto ibv = D3D12_INDEX_BUFFER_VIEW{
-			.BufferLocation = ib.gpu_va,
-			.SizeInBytes = UINT(UINT64(ib.index_count) * (ib.index_format == DXGI_FORMAT_R16_UINT ? 2 : 4)),
-			.Format = ib.index_format
-		};
-		this->command_list->IASetIndexBuffer(&ibv);
+		if (ib.index_count > 0) {
+			const auto ibv = D3D12_INDEX_BUFFER_VIEW{
+				.BufferLocation = ib.gpu_va,
+				.SizeInBytes = UINT(UINT64(ib.index_count) * (ib.index_format == DXGI_FORMAT_R16_UINT ? 2 : 4)),
+				.Format = ib.index_format
+			};
+			this->command_list->IASetIndexBuffer(&ibv);
+		}
 	}
 
 	// the per-draw uniforms (root 32-bit constants)
@@ -843,11 +850,13 @@ void context::draw_indexed(
 		this->command_list->RSSetScissorRects(1, &scissor_desc);
 	}
 
-	// the draw call
+	// the draw call (skipped for an empty index buffer)
 	{
 		// NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast, "the renderer owns the object; the base-class reference comes from the ruis API")
 		const auto& ib = static_cast<const index_buffer&>(va.indices.get());
-		this->command_list->DrawIndexedInstanced(ib.index_count, 1, 0, 0, 0);
+		if (ib.index_count > 0) {
+			this->command_list->DrawIndexedInstanced(ib.index_count, 1, 0, 0, 0);
+		}
 	}
 }
 
